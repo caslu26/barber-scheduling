@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css">
+    <meta name="description" content="barbearia">
+    <link rel="stylesheet" href="style.css">
+    <title>Barbearia</title>
+</head>
+<body>
+    <header class="cabeçalho">
+        <img class="img-log" src="imagens/Logo Barbearia ilustrado Cinza.jpg" alt="imagem do logo" height="125  " width="125">
+        <nav class="cabeçalho-menu">
+            <a class="cabeçalho-menu-item" href="#">Inicio</a>
+            <a class="cabeçalho-menu-item" href="#">Estilos de Cortes</a>
+            <a class="cabeçalho-menu-item" href="#">Localização</a>
+            <a class="cabeçalho-menu-item" href="#">Quem Somos</a>
+            <a class="cabeçalho-menu-item" href="#">Contatos</a>
+            <a class="cabeçalho-menu-item" href="login.html">Login / Log out</a>
+        </nav>
+    </header>
+
+    <main class="conteudo" id="inicio">
+        <section class="conteudo-principal">
+            <div class="conteudo-principal-escrito">
+                <h1 class="conteudo-principal-escrito-titulo">Barbearia</h1>
+                <p class="conteudo-principal-escrito-subtitulo">Lorem Ipsum é simplesmente um texto fictício da indústria de impressão <br> e composição tipográfica.<br> 
+                    Lorem Ipsum tem sido o texto fictício padrão da indústria desde 1500,<br> quando um impressor desconhecido <br>
+                    </p>
+
+            </div>
+            <img class="conteudo-principal-imagem" src="imagens/barba2.jpg" alt="segunda imagem-barbeiro cortando">
+        </section>
+
+        <section class="conteudo-secundario" id="cortes">
+            <h1 class="conteudo-secundario-titulo"><strong>Estilos de Cortes</strong></h1>
+
+            <img src="imagens/corte1.jpg" alt="estilo-corte-1" class="conteudo-secundario-paragrafo" height="245" width="225">
+            <img src="imagens/corte2.jpg" alt="estilo-corte-1" class="conteudo-secundario-paragrafo" height="245" width="225">
+            <img src="imagens/corte3.jpg" alt="estilo-corte-1" class="conteudo-secundario-paragrafo" height="245" width="225">
+        </section>
+
+        <section class="conteudo-secundario" id="quem-somos">
+            <h1 class="conteudo-secundario-subtitulo"><strong>Quem somos </strong></h1>
+            <p>Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e composição tipográfica.<br> 
+               Lorem Ipsum tem sido o texto fictício padrão da indústria desde 1500, quando um impressor desconhecido <br>
+                </p>
+        </section>
+
+        <section>
+            <div class="container">
+                <h1>Agende um Horario conosco </h1>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Calendário</h2>
+                        <div id="calendar"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Horário</h2>
+                        <select id="timeslot" class="form-control">
+                            <option value="9:00 AM">9:00 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="1:00 PM">1:00 PM</option>
+                            <option value="2:00 PM">2:00 PM</option>
+                        </select>
+                        <button id="bookAppointment" class="btn btn-primary mt-3">Agendar</button>
+                    </div>
+                </div>
+
+                </div>
+                <br>
+                <aside>
+                <h5 class="conteudo-secundario-subtitulo">Horarios Agendados</h5>
+                <ul id="scheduledDates"></ul></aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape contatos-localizacao-container" id="contatos-localizacao">
+        <section>
+            <h1 class="conteudo-principal-escrito-titulo">Nossa Localização</h1>
+            <div class="mapa">
+                <div id="map"></div>
+            </div>
+        </section>
+        <section class="infos">
+            <h1 class="conteudo-principal-escrito-titulo">Nossos Contatos</h1>
+            <a href="https://wa.me/11948391523">Whatsapp</a><i class="bi bi-whatsapp"></i>
+            <a href="#">Instagram</a><i class="bi bi-instagram"></i>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwCwDNhCBpfMfPGzZfInhAHm3OFXVTZt0&callback=initMap" async defer></script>
+</body>
+
+</html>

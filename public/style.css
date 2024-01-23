@@ -1,0 +1,321 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(59, 59, 59);
+}
+
+header {
+    background-color: rgb(59, 59, 59);
+    color: white;
+    display: flex;
+    text-align: center;
+    list-style: none;
+    padding: 20px;
+}
+
+.cabeçalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+}
+
+.cabeçalho-menu{
+    display: flex;
+    gap: 32px;
+}
+
+.cabeçalho-menu-item {
+    font-family: sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.conteudo {
+    padding-left: 40px;
+    margin-bottom: 48px;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo-principal-escrito {
+    display:flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.conteudo-principal-escrito-titulo {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    color: white;
+}
+
+.conteudo-principal-escrito-subtitulo {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: white;
+}
+
+.conteudo-principal-imagem{
+    height: 330px;
+}
+
+.conteudo-secundario {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    justify-content: space-around;
+    margin-left:100px;
+    margin-top: 48px;
+    color: white;
+}
+
+.conteudo-secundario-titulo {
+    
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 50px;
+
+    
+}
+
+.conteudo-secundario-subtitulo {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    justify-content: space-around;
+
+}
+
+
+
+.conteudo-principal-escrito-subtitulo{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: white;
+}
+
+
+.conteudo-secundario-paragrafo{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+img {
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+nav li {
+    display: inline;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.container {
+    background-color: rgb(59, 59, 59);
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    
+}
+
+#calendar {
+    background-color: #ffffff;
+    color: black;
+ 
+}
+
+#timeslot {
+    width: 100%;
+}
+
+
+.image {
+    display: inline;
+    padding-left: 50%;
+    
+}
+
+h1,h5 {
+    font-family: sans-serif;
+    color: white;
+
+}
+
+#map {
+    height: 300px;
+    width: 300px;
+}
+
+.rodape {
+    padding: 32px;
+    display: flex;
+    flex-direction: row; /* Altera a direção do layout para linha */
+    
+}
+
+.infos {
+    font-family: sans-serif;
+    font-weight: 400;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contatos-localizacao-container section {
+    width: 100%; /* Ocupa a largura total do contêiner pai */
+}
+
+.mapa {
+    height: 300px;
+    margin-bottom: 15px; /* Adiciona margem inferior entre a localização e as informações */
+}
+
+a {
+    padding: 15px;
+    flex-direction: row;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+
+/* estilo para os formumarios */
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 950px;
+
+  }
+
+  .barber-logo{
+    display: block;
+    
+   
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    font-family: sans-serif;
+    font-weight: 400;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+  }
+
+
+  h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  button{
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 400;
+    margin-left: 10px;
+    font-weight: 400;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(90, 90, 90);
+    color: white;
+    border:none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top:10px;
+  }
+  
+  a  {
+    color: rgb(255, 255, 255); 
+    text-decoration: none;
+    font-weight: 400;
+    font-size: larger;
+    margin-left: 10px;
+  }
+  
+  
+  .menu  {
+    background: #2ECC40;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 24px;
+    font-family:sans-serif;
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .barber-logo {
+    display: inline;
+    padding-left: 70px;
+    
+  }
+  
+
+  
+  /* Estilo para mensagens de erro e sucesso */
+  .message {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+  }
+  
+  .error {
+      background-color: #FF5733;
+      color: white;
+  }
+  
+  .sucess {
+      background-color: #2ECC40;
+      color: white;
+  }
+  
+
+/* Adicione uma media query para ajustar o estilo em telas menores */
+@media screen and (max-width: 400px) {
+    .conteudo-secundario {
+        flex-direction: row;
+        margin: 0;
+        justify-content: space-around;
+    }
+}
