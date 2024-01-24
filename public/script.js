@@ -34,7 +34,7 @@ $(document).ready(function() {
         // Atualize a lista de agendamentos na página
         updateScheduledDates();
 
-        alert('Você agendou: ' + appointment);
+        alert('Você agendou um horario: ' + appointment);
     });
 
     // Função para atualizar a lista de agendamentos
