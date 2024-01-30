@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css">
+    <meta name="description" content="barbearia">
+    <link rel="stylesheet" href="style.css">
+    <title>Barbearia</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1>Agende um Horario</h1>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Calendário</h2>
+                    <div id="calendar"></div>
+                </div>
+                <div class="col-md-6">
+                    <h2>Horário</h2>
+                    <select id="timeslot" class="form-control">
+                        <option value="7:00 AM">7:00 AM</option>
+                        <option value="8:00 AM">8:00 AM</option>
+                        <option value="9:00 AM">9:00 AM</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="12:00 PM">12:00 PM</option>
+                        <option value="1:00 PM">1:00 PM</option>
+                        <option value="2:00 PM">2:00 PM</option>
+                        <option value="3:00 PM">3:00 PM</option>
+                        <option value="4:00 PM">4:00 PM</option>
+                        <option value="5:00 PM">5:00 PM</option>
+                        <option value="6:00 PM">6:00 PM</option>
+                        <option value="7:00 PM">7:00 PM</option>
+                        <option value="8:00 PM">8:00 PM</option>
+                        <option value="9:00 PM">9:00 PM</option>
+                    </select>
+                    <button id="bookAppointment" class="btn btn-primary mt-3">Confirmar Agendamento</button><br><br><br><br>
+                    <aside>
+                        <h5 class="conteudo-secundario-subtitulo">Horarios Agendados</h5>
+                        <ul id="scheduledDates"></ul></aside>
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+
+</html>

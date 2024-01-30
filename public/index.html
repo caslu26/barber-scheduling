@@ -18,9 +18,8 @@
         <img class="img-log" src="imagens/Logo Barbearia ilustrado Cinza.jpg" alt="imagem do logo" height="125  " width="125">
         <nav class="cabeçalho-menu">
             <a class="cabeçalho-menu-item" href="#">Inicio</a>
-            <a class="cabeçalho-menu-item" href="#">Estilos de Cortes</a>
+            <a class="cabeçalho-menu-item" href="#">Agenda</a>
             <a class="cabeçalho-menu-item" href="#">Localização</a>
-            <a class="cabeçalho-menu-item" href="#">Quem Somos</a>
             <a class="cabeçalho-menu-item" href="#">Contatos</a>
             <a class="cabeçalho-menu-item" href="login.html">Login / Log out</a>
         </nav>
@@ -29,7 +28,7 @@
     <main class="conteudo" id="inicio">
         <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
-                <h1 class="conteudo-principal-escrito-titulo">Barbearia</h1>
+                <h1 class="conteudo-principal-escrito-titulo"><strong>Barbearia</strong></h1>
                 <p class="conteudo-principal-escrito-subtitulo">Lorem Ipsum é simplesmente um texto fictício da indústria de impressão <br> e composição tipográfica.<br> 
                     Lorem Ipsum tem sido o texto fictício padrão da indústria desde 1500,<br> quando um impressor desconhecido <br>
                     </p>
@@ -39,61 +38,29 @@
         </section>
 
         <section class="conteudo-secundario" id="cortes">
-            <h1 class="conteudo-secundario-titulo"><strong>Estilos de Cortes</strong></h1>
+            <h1 class="conteudo-secundario-titulo"><strong>Agende um horario</strong></h1>
+            
+            <div class="conteudo-secudario-img">
+        
+                <a href="agendamento.html">
+                    <img src="imagens/corte1.jpg" alt="estilo-corte-1" class="conteudo-secundario-paragrafo.barber-img" height="245" width="225" data-barber="Barbeiro 1"><br><br><button>Agenda</button>
+                </a>
 
-            <img src="imagens/corte1.jpg" alt="estilo-corte-1" class="conteudo-secundario-paragrafo" height="245" width="225">
-            <img src="imagens/corte2.jpg" alt="estilo-corte-1" class="conteudo-secundario-paragrafo" height="245" width="225">
-            <img src="imagens/corte3.jpg" alt="estilo-corte-1" class="conteudo-secundario-paragrafo" height="245" width="225">
-        </section>
-
-        <section class="conteudo-secundario" id="quem-somos">
-            <h1 class="conteudo-secundario-subtitulo"><strong>Quem somos </strong></h1>
-            <p>Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e composição tipográfica.<br> 
-               Lorem Ipsum tem sido o texto fictício padrão da indústria desde 1500, quando um impressor desconhecido <br>
-                </p>
-        </section>
-
-        <section>
-            <div class="container">
-                <h1>Agende um Horario conosco </h1>
-                <br>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2>Calendário</h2>
-                        <div id="calendar"></div>
-                    </div>
-                    <div class="col-md-6">
-                        <h2>Horário</h2>
-                        <select id="timeslot" class="form-control">
-                            <option value="9:00 AM">9:00 AM</option>
-                            <option value="10:00 AM">10:00 AM</option>
-                            <option value="11:00 AM">11:00 AM</option>
-                            <option value="12:00 PM">12:00 PM</option>
-                            <option value="1:00 PM">1:00 PM</option>
-                            <option value="2:00 PM">2:00 PM</option>
-                        </select>
-                        <button id="bookAppointment" class="btn btn-primary mt-3">Agendar</button>
-                    </div>
-                </div>
-
-                </div>
-                <br>
-                <aside>
-                <h5 class="conteudo-secundario-subtitulo">Horarios Agendados</h5>
-                <ul id="scheduledDates"></ul></aside>
+            </section><br><br><br>
             </div>
-        </section>
+
+
     </main>
 
     <footer class="rodape contatos-localizacao-container" id="contatos-localizacao">
         <section>
-            <h1 class="conteudo-principal-escrito-titulo">Nossa Localização</h1>
+            <h1 class="conteudo-principal-escrito-titulo"><strong>Nossa Localização</strong></h1>
             <div class="mapa">
                 <div id="map"></div>
             </div>
         </section>
         <section class="infos">
-            <h1 class="conteudo-principal-escrito-titulo">Nossos Contatos</h1>
+            <h1 class="conteudo-principal-escrito-titulo"><strong>Nossos Contatos</strong></h1>
             <a href="https://wa.me/11948391523">Whatsapp</a><i class="bi bi-whatsapp"></i>
             <a href="#">Instagram</a><i class="bi bi-instagram"></i>
         </section>

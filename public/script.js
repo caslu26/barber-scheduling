@@ -1,6 +1,14 @@
 $(document).ready(function() {
     var selectedDate; // Variável para armazenar a data selecionada
-    var appointments = []; // Array para armazenar os agendamentos
+    var selectedBarber; // Variável para armazenar o barbeiro selecionado
+    var appointments = {}; // Objeto para armazenar os agendamentos por barbeiro
+
+    // Adicione um evento de clique às imagens dos barbeiros
+    $('.barber-img').on('click', function() {
+        selectedBarber = $(this).data('barber');
+        $('#selectedBarber').text(selectedBarber); // Atualize o nome do barbeiro no modal
+        $('#appointmentModal').modal('show'); // Abra o modal de agendamento
+    });
 
     // Initialize the calendar
     $('#calendar').fullCalendar({
@@ -18,7 +26,7 @@ $(document).ready(function() {
         }
     });
 
-    // Manipule o clique no botão "Agendar"
+    // Manipule o clique no botão "Agendar" no modal
     $('#bookAppointment').on('click', function() {
         if (!selectedDate) {
             alert('Selecione uma data no calendário.');
@@ -28,13 +36,19 @@ $(document).ready(function() {
         var selectedTime = $('#timeslot').val();
         var appointment = 'Data: ' + selectedDate + ' Hora: ' + selectedTime;
 
-        // Adicione o agendamento ao array de agendamentos
-        appointments.push(appointment);
+        // Verifique se o objeto appointments já possui uma chave para o barbeiro selecionado
+        if (!appointments[selectedBarber]) {
+            appointments[selectedBarber] = []; // Se não existir, crie um array vazio para o barbeiro
+        }
+
+        // Adicione o agendamento ao array de agendamentos do barbeiro selecionado
+        appointments[selectedBarber].push(appointment);
 
         // Atualize a lista de agendamentos na página
         updateScheduledDates();
 
         alert('Você agendou um horario: ' + appointment);
+        $('#appointmentModal').modal('hide'); // Feche o modal de agendamento
     });
 
     // Função para atualizar a lista de agendamentos
@@ -42,11 +56,38 @@ $(document).ready(function() {
         var $scheduledDates = $('#scheduledDates');
         $scheduledDates.empty();
 
-        for (var i = 0; i < appointments.length; i++) {
-            var $appointmentItem = $('<li>').text(appointments[i]);
-            $scheduledDates.append($appointmentItem);
+        // Percorra cada barbeiro no objeto appointments
+        for (var barber in appointments) {
+            if (appointments.hasOwnProperty(barber)) {
+                // Crie um item de lista para cada agendamento do barbeiro
+                var $barberItem = $('<li>').text(barber + ':');
+                var $appointmentsList = $('<ul>');
+
+                // Adicione cada agendamento do barbeiro à lista
+                for (var i = 0; i < appointments[barber].length; i++) {
+                    var $appointmentItem = $('<li>').text(appointments[barber][i]);
+                    $appointmentsList.append($appointmentItem);
+                }
+
+                $barberItem.append($appointmentsList);
+                $scheduledDates.append($barberItem);
+            }
         }
     }
+});
+
+$(document).ready(function() {
+    $('.barber-img').on('click', function() {
+        var selectedBarber = $(this).data('barber');
+        var selectedDate = moment().format('YYYY-MM-DD'); // Supondo que você queira agendar para hoje
+
+        var selectedTime = prompt("Escolha um horário para agendar com " + selectedBarber + " (Formato: HH:MM AM/PM)");
+
+        if (selectedTime !== null && selectedTime !== "") {
+            var appointment = 'Barbeiro: ' + selectedBarber + ', Data: ' + selectedDate + ', Hora: ' + selectedTime;
+            window.open('index.html?appointment=' + encodeURIComponent(appointment), 'Agendamento', 'width=600,height=400');
+        }
+    });
 });
 
 

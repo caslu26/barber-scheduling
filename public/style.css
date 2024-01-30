@@ -53,10 +53,12 @@ header {
 }
 
 .conteudo-principal-escrito-titulo {
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: 64px;
     color: white;
+    display: flex;
+    text-align: center;
+    font-weight: 400;
+    list-style: none;
+    padding: 20px;
 }
 
 .conteudo-principal-escrito-subtitulo {
@@ -69,56 +71,46 @@ header {
 .conteudo-principal-imagem{
     height: 330px;
 }
+    .conteudo-secudario-img{
+        color: white;
+        display: flex;
+        text-align: center;
+        list-style: none;
+        padding: 20px;
+    }
 
-.conteudo-secundario {
-    display: inline-block;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    justify-content: space-around;
-    margin-left:100px;
-    margin-top: 48px;
-    color: white;
-}
+    .conteudo-secudario-img p{
+        font-family: sans-serif;
+        justify-content: space-around;
+        color: white;
+        display: flex;
+        text-align: center;
+        list-style: none;
+        padding: 20px;
+    }
 
-.conteudo-secundario-titulo {
-    
-    margin: 0;
-    font-family: sans-serif;
-    font-weight: 400;
-    color: white;
-    margin-bottom: 50px;
+    .conteudo-secundario {
+        display:inline-block;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        justify-content: space-between;
+        margin-left:100px;
+        margin-top: 48px;
+        color: white;
+    }
 
-    
-}
+    .conteudo-secundario-titulo {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        font-family: sans-serif;
+        font-weight: 400;
+        color: white;
+        margin-bottom: 50px;
 
-.conteudo-secundario-subtitulo {
-    display: inline-block;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    justify-content: space-around;
-
-}
-
-
-
-.conteudo-principal-escrito-subtitulo{
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    color: white;
-}
-
-
-.conteudo-secundario-paragrafo{
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px;
-}
+        
+    }
 
 img {
     border-radius: 50%;
@@ -178,11 +170,13 @@ h1,h5 {
 }
 
 .rodape {
+    text-align: center;
     padding: 32px;
     display: flex;
     flex-direction: row; /* Altera a direção do layout para linha */
     
 }
+
 
 .infos {
     font-family: sans-serif;
@@ -199,18 +193,18 @@ h1,h5 {
 }
 
 .mapa {
+    
     height: 300px;
     margin-bottom: 15px; /* Adiciona margem inferior entre a localização e as informações */
 }
 
-a {
-    padding: 15px;
-    flex-direction: row;
+.infos a {
     font-family: sans-serif;
     font-weight: 400;
     color: white;
     margin-top: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    padding: 10px;
 }
 
 
@@ -255,6 +249,11 @@ form {
     border-radius: 50px;
     cursor: pointer;
     margin-top:10px;
+  }
+
+  button:hover{
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
   }
   
   a  {

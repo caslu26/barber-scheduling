@@ -2,7 +2,7 @@ const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 
 const app = express();
-const port = 3014;
+const port = 3002;
 
 app.use(express.static('public'));
 app.use(express.static(__dirname + '/public'));
@@ -16,11 +16,11 @@ dbConnection.serialize(() => {
 app.post('/cadastro', (req, res) => {
   const { email, senha, nomeCompleto } = req.body;
 
-  const sql = 'INSERT INTO  clientes (email,senha,nomeCompleto) VALUES (?, ?, ?)';
+  const sql = 'INSERT INTO clientes (email, senha, nomeCompleto) VALUES (?, ?, ?)';
   dbConnection.run(sql, [email, senha, nomeCompleto], function (err) {
     if (err) {
       console.error(err.message);
-      res.status(500).send('Erro ao tentar fazer cadastro');
+      return res.status(500).send('Erro ao tentar fazer cadastro');
     } else {
       res.redirect('/login.html');
     }
@@ -30,21 +30,26 @@ app.post('/cadastro', (req, res) => {
 // rota de login 
 
 app.post('/login', (req, res) => {
-  const { email, senha, } = req.body;
+  const { email, senha } = req.body;
 
   const sql = 'SELECT * FROM clientes WHERE email = ? AND senha = ?';
   dbConnection.get(sql, [email, senha], (err, row) => {
+    console.log('Email:', email);
+    console.log('Senha:', senha);
+
     if (err) {
       console.error(err.message);
       return res.status(500).send('Erro ao tentar fazer login');
     }
-
-
-
-    // Envie o arquivo initial.html apenas se a autenticação for bem-sucedida
-    res.redirect('/index.html');
+    console.log('Resultado da consulta SQL:', row);
+    if (!row) {
+      return res.status(400).send('Usuário ou senha inválido');
+    } else {
+      return res.redirect('/index.html');
+    }
   });
 });
+
 
 
 app.get('/', (req, res) => {
